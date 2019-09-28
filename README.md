@@ -25,10 +25,10 @@ To make long story short: Make an open-source game using open-source tools and a
 
 ## Tools I will be using
 
-* Godot Game Engine 3.1.1
-* Audacity
-* GNU Image Manipulation Program
-* Krita
+* Godot 3.1.1
+* Audacity 2.1.2
+* GNU Image Manipulation Program 2.10
+* Krita 4.2.5
 
 ## Asset sources websites
 

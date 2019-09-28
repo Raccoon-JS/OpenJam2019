@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/pink-sky-background.png" type="Texture" id=1]
+[ext_resource path="res://sprites/layer_of_clouds.png" type="Texture" id=2]
+[ext_resource path="res://scenes/apartment.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/characters/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/tileset/tileset.tres" type="TileSet" id=5]
+
+[node name="game" type="Node"]
+
+[node name="background" type="Node" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="background"]
+
+[node name="pink-sky" type="ParallaxLayer" parent="background/ParallaxBackground"]
+position = Vector2( -900, 0 )
+motion_mirroring = Vector2( 900, 900 )
+
+[node name="Sprite" type="Sprite" parent="background/ParallaxBackground/pink-sky"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="while-clouds" type="ParallaxLayer" parent="background/ParallaxBackground"]
+position = Vector2( -900, 0 )
+motion_mirroring = Vector2( 900, 1800 )
+
+[node name="layer_of_clouds" type="Sprite" parent="background/ParallaxBackground/while-clouds"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="apartments" type="ParallaxLayer" parent="background/ParallaxBackground"]
+motion_mirroring = Vector2( 0, 896 )
+
+[node name="apartment" parent="background/ParallaxBackground/apartments" instance=ExtResource( 3 )]
+
+[node name="objects" type="Node" parent="."]
+
+[node name="left_wall" type="StaticBody2D" parent="objects"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="objects/left_wall"]
+polygon = PoolVector2Array( 0, 0, 0, 8000, -1200, 8000, -1200, 0 )
+
+[node name="right_wall" type="StaticBody2D" parent="objects"]
+position = Vector2( 2100, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="objects/right_wall"]
+polygon = PoolVector2Array( 0, 0, 0, 8000, -1200, 8000, -1200, 0 )
+
+[node name="characters" type="Node" parent="."]
+
+[node name="player" parent="characters" instance=ExtResource( 4 )]
+position = Vector2( 430, 7832 )
+gravity = 40
+jump_force = 700
+
+[node name="blocks" type="TileMap" parent="."]
+scale = Vector2( 2.5, 2.5 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 3276800, 1, 0, 3276801, 1, 0, 3276802, 1, 0, 3276803, 1, 0, 3276804, 1, 0, 3276805, 1, 0, 3276806, 1, 0, 3276807, 1, 0, 3276808, 1, 0, 3276809, 1, 0, 3276810, 1, 0, 3276811, 1, 0, 3276812, 1, 0, 3276813, 1, 0, 3276814, 1, 0, 3276815, 1, 0, 3276816, 1, 0, 3276817, 1, 0, 3276818, 1, 0, 3276819, 1, 0, 3276820, 1, 0, 3276821, 1, 0, 3276822, 1, 0, 3276823, 1, 0, 3276824, 1, 0, 3407871, 4, 0, 3342336, 4, 0, 3342337, 4, 0, 3342338, 4, 0, 3342339, 4, 0, 3342340, 4, 0, 3342341, 4, 0, 3342342, 4, 0, 3342343, 4, 0, 3342344, 4, 0, 3342345, 4, 0, 3342346, 4, 0, 3342347, 4, 0, 3342348, 4, 0, 3342349, 4, 0, 3342350, 4, 0, 3342351, 4, 0, 3342352, 4, 0, 3342353, 4, 0, 3342354, 4, 0, 3342355, 4, 0, 3342356, 4, 0, 3342357, 4, 0, 3342358, 4, 0, 3342359, 4, 0, 3342360, 4, 0, 3342361, 4, 0, 3342362, 4, 0, 13172735, 536870918, 0, 13107200, 4, 0, 13107201, 4, 0, 13107202, 4, 0, 13107203, 4, 0, 13107204, 4, 0, 13107205, 4, 0, 13107206, 4, 0, 13107207, 4, 0, 13107208, 4, 0, 13107209, 4, 0, 13107210, 4, 0, 13107211, 4, 0, 13107212, 4, 0, 13107213, 4, 0, 13107214, 4, 0, 13107215, 4, 0, 13107216, 4, 0, 13107217, 4, 0, 13107218, 4, 0, 13107219, 4, 0, 13107220, 4, 0, 13107221, 4, 0, 13107222, 6, 0 )
