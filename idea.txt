@@ -1,0 +1,22 @@
+== OPEN JAM 2019 ==
+
+THEME: The Future
+
+### ideas ###
+- make a game about future cleric.
+- redo "bright eye" but with short-term goal.
+- romantic platfomer 
+-- "The Future of Love"
+
+### Karma ###
+Game Engine: Godot game engine 3.1.1
+Open Source Tools:
+- GNU Image Manipulation Program
+- Audacity
+- Krita
+exports: html5, linux, macos, window
+Repo: Github
+Created with which distro: MX Linux 18.3 and Ubuntu 19.01
+Creative Commons assets: OpenGameArt or itch.io
+
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NAPZ - pop songs - 02 murmure nu.wav-3d8bdaa0d0dd657c8c7594d6371b03c4.sample"
+
+[deps]
+
+source_file="res://sounds/NAPZ - pop songs - 02 murmure nu.wav"
+dest_files=[ "res://.import/NAPZ - pop songs - 02 murmure nu.wav-3d8bdaa0d0dd657c8c7594d6371b03c4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
