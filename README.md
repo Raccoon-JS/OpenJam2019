@@ -8,7 +8,9 @@ To make long story short: Make an open-source game using open-source tools and a
 
 ## The Game
 
-### (Working) Title: The Future of Love
+<p align = "center">
+(Working) Title: <b>The Future of Love</b><br>
+</p>
 
 <p>
 <img src="screenshots/title-image.png">
