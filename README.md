@@ -30,6 +30,8 @@ To make long story short: Make an open-source game using open-source tools and a
 * GNU Image Manipulation Program 2.10
 * Krita 4.2.5
 
+Developed with: MX Linux 18.3 and Ubuntu 19.01
+
 ## Asset sources websites
 
 * [Open Game Art](https://opengameart.org/)
