@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var speed = 200
 export var gravity = 50
 export var less_gravity = 20
-export var jump_force = 400
+export var jump_force = 500
 var velo = Vector2()
 var drag = 0.5
 
@@ -68,8 +68,8 @@ func _physics_process(_delta):
 	else:
 		if move_vec.y < 0:
 			play_anim("jump")
-		else:
-			play_anim("fall")
+		#else:
+		#	play_anim("fall")
 	pass
 
 func jump():

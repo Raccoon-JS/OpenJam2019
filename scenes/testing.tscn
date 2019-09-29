@@ -50,8 +50,6 @@ polygon = PoolVector2Array( 0, 0, 0, 8000, -1200, 8000, -1200, 0 )
 
 [node name="player" parent="characters" instance=ExtResource( 4 )]
 position = Vector2( 430, 7832 )
-gravity = 40
-jump_force = 700
 
 [node name="blocks" type="TileMap" parent="."]
 scale = Vector2( 2.5, 2.5 )
