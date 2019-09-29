@@ -31,7 +31,7 @@ func _physics_process(_delta):
 	var cur_grounded = is_on_floor()
 
 	y_velo += gravity
-	if cur_grounded and Input.is_action_pressed("jump"):
+	if cur_grounded and Input.is_action_just_pressed("jump"):
 		y_velo = -jump_force
 	
 	if cur_grounded and y_velo >= 5:

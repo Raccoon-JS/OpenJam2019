@@ -2,7 +2,7 @@
 
 [![OPEN JAM 2019](open-jam-logo.png)](https://itch.io/jam/open-jam-2019)
 
-Duration: 80 hours (September 27th 7PM Central Time to October 1st 3AM)
+Duration: 80 hours (September 27th 12 PM Central Time 30th 8 PM)
 
 To make long story short: Make an open-source game using open-source tools and assets.
 

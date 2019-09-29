@@ -34,11 +34,15 @@ region_enabled = true
 region_rect = Rect2( 48, 0, 16, 16 )
 
 [node name="rail_floor_0" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 16 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="rail_floor_0"]
 
@@ -52,6 +56,9 @@ texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 320, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="rail_floor_1"]
 
@@ -60,16 +67,35 @@ polygon = PoolVector2Array( 0, 0, 16, 0, 16, 6, 12, 6, 12, 16, 4, 16, 4, 6, 0, 6
 
 [node name="rail_floor_2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 48, 16 )
+position = Vector2( 32, 16 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 48, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="rail_floor_2"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rail_floor_2/StaticBody2D"]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 6, 12, 6, 4, 6, 0, 6 )
+
+[node name="rail_floor_3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 48, 16 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 320, 48, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rail_floor_3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rail_floor_3/StaticBody2D"]
+polygon = PoolVector2Array( 4, 0, 12, 0, 12, 16, 4, 16 )
 
 [node name="wall_block" type="StaticBody2D" parent="."]
 position = Vector2( 64, 0 )
