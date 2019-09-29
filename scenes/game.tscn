@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pink-sky-background.png" type="Texture" id=2]
 [ext_resource path="res://sprites/layer_of_clouds.png" type="Texture" id=3]
 [ext_resource path="res://scenes/tileset/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://scenes/characters/player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/characters/falling_platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/characters/spwaner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/characters/falling_platform.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "moving_background"
@@ -61,25 +62,55 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -1638399, 9, 0, -1638397, 9, 0, -1638379, 9, 0, -1638377, 9, 0, -1507327, 9, 0, -1507325, 9, 0, -1507307, 9, 0, -1507305, 9, 0, -1376255, 9, 0, -1376253, 9, 0, -1376235, 9, 0, -1376233, 9, 0, -1245183, 9, 0, -1245181, 9, 0, -1245163, 9, 0, -1245161, 9, 0, -1114111, 9, 0, -1114109, 9, 0, -1114091, 9, 0, -1114089, 9, 0, -983039, 9, 0, -983037, 9, 0, -983019, 9, 0, -983017, 9, 0, -851967, 9, 0, -851965, 9, 0, -851947, 9, 0, -851945, 9, 0, -720895, 9, 0, -720893, 9, 0, -720875, 9, 0, -720873, 9, 0, -589823, 9, 0, -589821, 9, 0, -589803, 9, 0, -589801, 9, 0, -458751, 9, 0, -458749, 9, 0, -458731, 9, 0, -458729, 9, 0, -327679, 9, 0, -327677, 9, 0, -327659, 9, 0, -327657, 9, 0, -196607, 9, 0, -196605, 9, 0, -196587, 9, 0, -196585, 9, 0, -65535, 9, 0, -65533, 9, 0, -65515, 9, 0, -65513, 9, 0, 65537, 9, 0, 65539, 9, 0, 65557, 9, 0, 65559, 9, 0, 196609, 9, 0, 196611, 9, 0, 196629, 9, 0, 196631, 9, 0, 327681, 9, 0, 327683, 9, 0, 327701, 9, 0, 327703, 9, 0, 458753, 9, 0, 458755, 9, 0, 458773, 9, 0, 458775, 9, 0, 589825, 9, 0, 589827, 9, 0, 589845, 9, 0, 589847, 9, 0, 720897, 9, 0, 720899, 9, 0, 720917, 9, 0, 720919, 9, 0, 851969, 9, 0, 851971, 9, 0, 851989, 9, 0, 851991, 9, 0, 983041, 9, 0, 983043, 9, 0, 983061, 9, 0, 983063, 9, 0, 1114113, 9, 0, 1114115, 9, 0, 1114133, 9, 0, 1114135, 9, 0, 1245185, 9, 0, 1245187, 9, 0, 1245205, 9, 0, 1245207, 9, 0, 1376257, 9, 0, 1376259, 9, 0, 1376277, 9, 0, 1376279, 9, 0, 1507329, 9, 0, 1507331, 9, 0, 1507349, 9, 0, 1507351, 9, 0, 1638401, 9, 0, 1638403, 9, 0, 1769473, 9, 0, 1769475, 9, 0, 1900545, 9, 0, 1900547, 9, 0, 2031617, 9, 0, 2031619, 9, 0, 2162689, 9, 0, 2162691, 9, 0, 2293761, 9, 0, 2293763, 9, 0, 2424833, 9, 0, 2424835, 9, 0, 2555905, 9, 0, 2555907, 9, 0, 2686977, 9, 0, 2686979, 9, 0, 2818049, 9, 0, 2818051, 9, 0, 2949121, 9, 0, 2949123, 9, 0, 3080193, 9, 0, 3080195, 9, 0, 3211265, 9, 0, 3211267, 9, 0 )
 
+[node name="floor" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 3145735, 536870918, 0, 3145736, 4, 0, 3145737, 4, 0, 3145738, 4, 0, 3145739, 4, 0, 3145740, 4, 0, 3145741, 4, 0, 3145742, 4, 0, 3145743, 4, 0, 3145744, 4, 0, 3145745, 4, 0, 3145746, 4, 0, 3145747, 4, 0, 3145748, 4, 0, 3145749, 4, 0, 3145750, 4, 0, 3145751, 4, 0, 3145752, 4, 0, 3145753, 4, 0, 3145754, 4, 0, 3145755, 4, 0, 3145756, 4, 0, 3145757, 4, 0, 3145758, 4, 0, 3145759, 4, 0, 3145760, 4, 0, 3145761, 4, 0, 3145762, 4, 0, 3145763, 4, 0, 3145764, 4, 0, 3145765, 4, 0, 3145766, 4, 0, 3145767, 4, 0, 3145768, 4, 0, 3145769, 4, 0, 3145770, 6, 0 )
+
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 240, 580 )
+position = Vector2( 280, 742 )
+speed = 250
+
+[node name="spwaner" parent="." instance=ExtResource( 6 )]
 
 [node name="platforms" type="Node" parent="."]
 
-[node name="falling_platform_0" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 240, 610 )
+[node name="falling_platform_0" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 220, 740 )
 
-[node name="falling_platform_1" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 390, 520 )
+[node name="falling_platform_1" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 350, 700 )
 
-[node name="falling_platform_2" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 570, 400 )
+[node name="falling_platform_2" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 460, 660 )
 
-[node name="falling_platform_3" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 400, 320 )
+[node name="falling_platform_3" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 600, 610 )
 
-[node name="falling_platform_4" parent="platforms" instance=ExtResource( 6 )]
-position = Vector2( 250, 210 )
+[node name="falling_platform_4" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 500, 540 )
+
+[node name="falling_platform_5" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 370, 510 )
+
+[node name="falling_platform_6" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 240, 440 )
+
+[node name="falling_platform_7" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 340, 340 )
+
+[node name="falling_platform_8" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 520, 272 )
+
+[node name="falling_platform_9" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 620, 190 )
+
+[node name="falling_platform_10" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 480, 150 )
+
+[node name="falling_platform_11" parent="platforms" instance=ExtResource( 7 )]
+position = Vector2( 350, 100 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/moving_background = SubResource( 1 )
